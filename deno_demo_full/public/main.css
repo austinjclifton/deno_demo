@@ -1,0 +1,44 @@
+/* Center the page content with a max width and set default font */
+body {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+}
+/* Add spacing below the slug toggle button container */
+#slug-toggle {
+  margin-bottom: 0.5rem;
+}
+/* Make the slug button slightly smaller than default */
+#slug-btn {
+  font-size: 0.85rem;
+}
+/* Use flexbox to layout the form horizontally with spacing between elements */
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+/* Make the input field take up remaining space in the flex container */
+input {
+  flex: 1;
+  padding: 0.5rem;
+}
+/* Style all buttons with padding and pointer cursor */
+button {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+/* Add top margin to separate the notes list from the form */
+ul {
+  margin-top: 1rem;
+}
+/* Use flexbox to layout each list item: content on left, delete button on right */
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+}
+/* Style timestamps to be smaller and gray for visual hierarchy */
+li .timestamp {
+  font-size: 0.85em;
+  color: #666;
+}
