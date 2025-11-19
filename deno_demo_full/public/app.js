@@ -91,5 +91,14 @@ slugBtn.onclick = async () => {
   slugBtn.textContent = `Slug Mode: ${slugMode ? "ON" : "OFF"}`;
 };
 
-// Load notes when the page first loads
+// Sync slug mode state with server and update button
+async function syncSlugMode() {
+  const res = await fetch("/api/slug-mode");
+  const { slugMode: mode } = await res.json();
+  slugMode = mode;
+  slugBtn.textContent = `Slug Mode: ${slugMode ? "ON" : "OFF"}`;
+}
+
+// Load notes and slug mode state when the page first loads
 loadNotes();
+syncSlugMode();

@@ -44,6 +44,11 @@ Deno.serve(async (req) => {
     return json({ slugMode });
   }
 
+   // GET /api/slug-mode
+  if (url.pathname === "/api/slug-mode" && req.method === "GET") {
+    return json({ slugMode });
+  }
+
   // Static files - If no API route matches, serve static files from the public directory
   // This handles requests for HTML, CSS, JS, images, etc.
   return serveDir(req, { fsRoot: "public" });
